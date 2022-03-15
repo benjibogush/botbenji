@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '2.0.4'
+    id 'application'
+
+}
+
+mainClassName = 'Main'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+group 'com.benji'
+
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+   compile 'net.dv8tion:JDA:3.5.0_329'
+
+}
+
+test {
+    useJUnitPlatform()
+}
